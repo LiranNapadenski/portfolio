@@ -1,137 +1,69 @@
 // gitprofile.config.ts
 
-
-
 const CONFIG = {
-
   github: {
-
-    username: 'LiranNapadenski', // Your GitHub org/user name. (This is the only required config)
-
+    username: 'LiranNapadenski',
   },
-
-  /**
-
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-
-   */
-
-  base: '/portfolio/',
-
+  base: '/portfolio/', 
   projects: {
-
     github: {
-
-      display: true, // Display GitHub projects?
-
+      display: true,
       header: 'Github Projects',
-
-      mode: 'manual', // Mode can be: 'automatic' or 'manual'
-
-      automatic: {
-
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-
-        limit: 8, // How many projects to display.
-
-        exclude: {
-
-          forks: false, // Forked projects will not be displayed if set to true.
-
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
-
-        },
-
-      },
-
+      mode: 'manual', 
       manual: {
-
-        // Properties for manually specifying projects
-
-        projects: [], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
-
+        projects: [], 
       },
-
     },
-
     external: {
-
       header: 'Research & Engineering Projects',
       projects: [
         {
-          title: 'SIMD-Optimized Cuckoo Trie Index',
+          title: 'Cuckoo Trie Vectorization',
           description:
-            'Optimized a high-performance in-memory index using AVX2 SIMD intrinsics[cite: 4]. Analyzed the "early-exit tax" and achieved up to 16.4% throughput gains in high-contention, multi-threaded workloads[cite: 4]. Developed using C++ with a focus on hardware-software interaction and memory-level parallelism[cite: 4].',
+            'Investigated the impact of SIMD vectorization on Cuckoo Trie search paths. Achieved up to 16.4% throughput gains in multi-threaded workloads while analyzing the "early-exit tax" in scalar vs. vector execution.',
           imageUrl: 'https://img.freepik.com/free-vector/abstract-background-with-low-poly-design_1048-8478.jpg',
-          link: '/Cuckoo_Trie_Optimization.pdf',
+          link: 'Cuckoo_Trie_Optimization.pdf', // Relative link
         },
         {
-          title: 'Application-Level AI Intrusion Detection System',
+          title: 'Web Application Attack Detection',
           description:
-            'Developed deep learning models (Transformer and Bi-LSTM) to detect web application attacks like SQL Injection and XSS. Achieved 99.93% accuracy using a character-level Transformer encoder to capture long-range contextual dependencies in malicious payloads[cite: 2].',
+            'Developed character-level Transformer and Bi-LSTM models to detect SQL injection and XSS attacks with 99.93% accuracy. Evaluated model robustness against long-range dependencies in HTTP request bodies.',
           imageUrl: 'https://img.freepik.com/free-vector/security-analyst-working-with-data-on-screens_107791-14028.jpg',
-          link: '/AI_Intrusion_Detection_Report.pdf',
+          link: 'AI_Intrusion_Detection_Report.pdf', // Relative link
         },
         {
-          title: 'Performance Stability of GNNs',
+          title: 'GNN Performance Stability Study',
           description:
-            'A comparative study of GNN architectures (GAT, GCN, GIN, GraphSAGE) evaluating ranking stability across varying label budgets. Identified critical performance flips in low-data regimes across datasets like Cora and ZINC[cite: 1].',
+            'Analyzed the consistency of GNN architecture rankings under varying label budgets. Identified "ranking flips" across Cora, Citeseer, and ZINC datasets when training data is limited.',
           imageUrl: 'https://img.freepik.com/free-vector/big-data-visualization-concept-illustration_114360-3942.jpg',
-          link: '/GNN_Performance_Study.pdf',
+          link: 'GNN_Performance_Study.pdf', // Relative link
         },
         {
-          title: 'Implicit Arithmetic Inference in LLMs',
+          title: 'Logic & Arithmetic Inference in LLMs',
           description:
-            'Proposed an evaluation framework to test Large Language Models on their ability to infer mathematical operations from natural language phrasing[cite: 3]. Explored the distinction between rote pattern recognition and logical inference in emergent LLM capabilities[cite: 3].',
+            'Evaluated emergent logical reasoning in LLMs by testing their ability to infer mathematical operations from natural language prompts, distinguishing between pattern recognition and true inference.',
           imageUrl: 'https://img.freepik.com/free-vector/brain-with-digital-circuit-elements_23-2148821033.jpg',
-          link: '/NLP_Math_Inference_Proposal.pdf',
+          link: 'NLP_Math_Inference_Proposal.pdf', // Relative link
         },
       ],
     },
-
   },
-
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
-
+  seo: { 
+    title: 'Portfolio of Liran Napadenski', 
+    description: 'M.Sc. Computer Science Student at Tel Aviv University specializing in Machine Learning and Systems.', 
+    imageURL: '' 
+  },
   social: {
-
-    linkedin: 'https://www.linkedin.com/in/liran-napadenski/',
-
-    phone: '',
-
-    email: '',
-
+    linkedin: 'liran-napadenski',
+    phone: '+972-52-2979723',
+    email: 'liran.napadenski@gmail.com',
   },
-
   resume: {
-
-    fileUrl:
-
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
-
+    fileUrl: '', // You can also put your CV in /public and link it here as 'My_CV.pdf'
   },
-
   skills: [
-    'Python',
-    'PyTorch',
-    'C++',
-    'AVX2/SIMD',
-    'Java',
-    'Spring Boot',
-    'C#',
-    'ASP.NET',
-    'SQL',
-    'React',
-    'TypeScript',
-    'Graph Neural Networks',
-    'Transformers/NLP',
-    'Machine Learning',
+    'Python', 'PyTorch', 'C++', 'AVX2/SIMD', 'Java', 'Spring Boot', 'C#', 'ASP.NET', 'SQL', 'React', 'TypeScript', 'Graph Neural Networks', 'Transformers/NLP', 'Machine Learning',
   ],
-
   experiences: [
     {
       company: 'Self-Employed',
@@ -141,7 +73,6 @@ const CONFIG = {
       companyLink: '',
     },
   ],
-
   educations: [
     {
       institution: 'Tel Aviv University',
@@ -157,150 +88,19 @@ const CONFIG = {
     },
     {
       institution: 'Odyssey – Academic Studies Program in the Sciences',
-      degree: 'Advanced Science and University Coursework',
+      degree: 'Advanced University Coursework',
       from: '2020',
       to: '2022',
     },
   ],
-
-  googleAnalytics: {
-
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-
-  },
-
-  // Track visitor interaction and behavior. https://www.hotjar.com
-
-  hotjar: { id: '', snippetVersion: 6 },
-
   themeConfig: {
-
     defaultTheme: 'lofi',
-
-
-
-    // Hides the switch in the navbar
-
-    // Useful if you want to support a single color mode
-
     disableSwitch: false,
-
-
-
-    // Should use the prefers-color-scheme media-query,
-
-    // using user system preferences, instead of the hardcoded defaultTheme
-
-    respectPrefersColorScheme: false,
-
-
-
-    // Display the ring in Profile picture
-
+    respectPrefersColorScheme: true,
     displayAvatarRing: true,
-
-
-
-    // Available themes. To remove any theme, exclude from here.
-
-    themes: [
-
-      'light',
-
-      'dark',
-
-      'cupcake',
-
-      'bumblebee',
-
-      'emerald',
-
-      'corporate',
-
-      'synthwave',
-
-      'retro',
-
-      'cyberpunk',
-
-      'valentine',
-
-      'halloween',
-
-      'garden',
-
-      'forest',
-
-      'aqua',
-
-      'lofi',
-
-      'pastel',
-
-      'fantasy',
-
-      'wireframe',
-
-      'black',
-
-      'luxury',
-
-      'dracula',
-
-      'cmyk',
-
-      'autumn',
-
-      'business',
-
-      'acid',
-
-      'lemonade',
-
-      'night',
-
-      'coffee',
-
-      'winter',
-
-      'dim',
-
-      'nord',
-
-      'sunset',
-
-      'caramellatte',
-
-      'abyss',
-
-      'silk',
-
-      'procyon',
-
-    ],
-
+    themes: ['light', 'dark', 'corporate', 'lofi', 'business', 'nord'],
   },
-
-
-
-  // Optional Footer. Supports plain text or HTML.
-
-  footer: `Made with <a 
-
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-
-      target="_blank"
-
-      rel="noreferrer"
-
-    >GitProfile</a> and ❤️`,
-
-
-
   enablePWA: true,
-
 };
-
-
 
 export default CONFIG;
