@@ -4,7 +4,7 @@ const CONFIG = {
   github: {
     username: 'LiranNapadenski',
   },
-  base: '/portfolio/',
+  base: 'portfolio/',
   projects: {
     github: {
       display: true,
