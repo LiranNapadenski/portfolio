@@ -1,20 +1,65 @@
 // gitprofile.config.ts
 
+
+
 const CONFIG = {
+
   github: {
-    username: 'LiranNapadenski',
+
+    username: 'LiranNapadenski', // Your GitHub org/user name. (This is the only required config)
+
   },
+
+  /**
+
+   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
+
+   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
+
+   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
+
+   */
+
   base: '/portfolio/',
+
   projects: {
+
     github: {
-      display: true,
+
+      display: true, // Display GitHub projects?
+
       header: 'Github Projects',
-      mode: 'manual', 
-      manual: {
-        projects: [], // Add your repo names here if you want them displayed
+
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
+
+      automatic: {
+
+        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+
+        limit: 8, // How many projects to display.
+
+        exclude: {
+
+          forks: false, // Forked projects will not be displayed if set to true.
+
+          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+
+        },
+
       },
+
+      manual: {
+
+        // Properties for manually specifying projects
+
+        projects: [], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+
+      },
+
     },
+
     external: {
+
       header: 'Research & Engineering Projects',
       projects: [
         {
@@ -47,20 +92,29 @@ const CONFIG = {
         },
       ],
     },
+
   },
-  seo: { 
-    title: 'Portfolio of Liran Napadenski', 
-    description: 'M.Sc. Computer Science Student at Tel Aviv University specializing in Machine Learning and Systems.', 
-    imageURL: '' 
-  },
+
+  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+
   social: {
-    linkedin: 'liran-napadenski',
-    phone: '+972-52-2979723',
-    email: 'liran.napadenski@gmail.com',
+
+    linkedin: 'https://www.linkedin.com/in/liran-napadenski/',
+
+    phone: '',
+
+    email: '',
+
   },
+
   resume: {
-    fileUrl: '', // Add the link to your main CV PDF here
+
+    fileUrl:
+
+      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+
   },
+
   skills: [
     'Python',
     'PyTorch',
@@ -77,6 +131,7 @@ const CONFIG = {
     'Transformers/NLP',
     'Machine Learning',
   ],
+
   experiences: [
     {
       company: 'Self-Employed',
@@ -86,6 +141,7 @@ const CONFIG = {
       companyLink: '',
     },
   ],
+
   educations: [
     {
       institution: 'Tel Aviv University',
@@ -106,14 +162,145 @@ const CONFIG = {
       to: '2022',
     },
   ],
-  themeConfig: {
-    defaultTheme: 'lofi',
-    disableSwitch: false,
-    respectPrefersColorScheme: true,
-    displayAvatarRing: true,
-    themes: ['light', 'dark', 'corporate', 'lofi', 'business', 'nord'],
+
+  googleAnalytics: {
+
+    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+
   },
+
+  // Track visitor interaction and behavior. https://www.hotjar.com
+
+  hotjar: { id: '', snippetVersion: 6 },
+
+  themeConfig: {
+
+    defaultTheme: 'lofi',
+
+
+
+    // Hides the switch in the navbar
+
+    // Useful if you want to support a single color mode
+
+    disableSwitch: false,
+
+
+
+    // Should use the prefers-color-scheme media-query,
+
+    // using user system preferences, instead of the hardcoded defaultTheme
+
+    respectPrefersColorScheme: false,
+
+
+
+    // Display the ring in Profile picture
+
+    displayAvatarRing: true,
+
+
+
+    // Available themes. To remove any theme, exclude from here.
+
+    themes: [
+
+      'light',
+
+      'dark',
+
+      'cupcake',
+
+      'bumblebee',
+
+      'emerald',
+
+      'corporate',
+
+      'synthwave',
+
+      'retro',
+
+      'cyberpunk',
+
+      'valentine',
+
+      'halloween',
+
+      'garden',
+
+      'forest',
+
+      'aqua',
+
+      'lofi',
+
+      'pastel',
+
+      'fantasy',
+
+      'wireframe',
+
+      'black',
+
+      'luxury',
+
+      'dracula',
+
+      'cmyk',
+
+      'autumn',
+
+      'business',
+
+      'acid',
+
+      'lemonade',
+
+      'night',
+
+      'coffee',
+
+      'winter',
+
+      'dim',
+
+      'nord',
+
+      'sunset',
+
+      'caramellatte',
+
+      'abyss',
+
+      'silk',
+
+      'procyon',
+
+    ],
+
+  },
+
+
+
+  // Optional Footer. Supports plain text or HTML.
+
+  footer: `Made with <a 
+
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+
+      target="_blank"
+
+      rel="noreferrer"
+
+    >GitProfile</a> and ❤️`,
+
+
+
   enablePWA: true,
+
 };
+
+
 
 export default CONFIG;
