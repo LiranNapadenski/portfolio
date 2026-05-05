@@ -41,9 +41,9 @@ const CONFIG = {
         {
           title: 'Logic & Arithmetic Inference in LLMs',
           description:
-            'Proposed an evaluation framework to test LLMs on their ability to infer mathematical operations from natural language phrasing.',
+            'Evaluated the emergent logical reasoning of LLMs by investigating their ability to infer mathematical operations from natural language prompts. Analyzed model limitations across dimensions such as number ranges, arithmetic operations (addition, subtraction, multiplication, division), and implicit vs. explicit phrasing.',
           imageUrl: 'https://img.freepik.com/free-vector/brain-with-digital-circuit-elements_23-2148821033.jpg',
-          link: '/portfolio/NLP_Math_Inference_Proposal.pdf',
+          link: '/portfolio/NLP_Math_Inference.pdf',
         },
       ],
     },
