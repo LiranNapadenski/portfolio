@@ -2,229 +2,102 @@
 
 const CONFIG = {
   github: {
-    username: 'LiranNapadenski', // Your GitHub org/user name. (This is the only required config)
+    username: 'LiranNapadenski',
   },
-  /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
   base: '/portfolio/',
   projects: {
     github: {
-      display: true, // Display GitHub projects?
+      display: true,
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
-      automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
-        exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
-        },
-      },
+      mode: 'manual', 
       manual: {
-        // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [], // List your specific repository names here
       },
     },
-    external: {
-      header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
-      projects: [
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-      ],
-    },
+  external: {
+    header: 'Research & Engineering Projects',
+    projects: [
+      {
+        title: 'SIMD-Optimized Cuckoo Trie Index',
+        description: 'Optimized a high-performance in-memory index using AVX2 SIMD...',
+        imageUrl: '...',
+        link: '/Cuckoo_Trie_Optimization.pdf', // Points to public/Cuckoo_Trie_Optimization.pdf[cite: 4]
+      },
+      {
+        title: 'Application-Level AI Intrusion Detection System',
+        description: 'Developed deep learning models (Transformer and Bi-LSTM)...',
+        imageUrl: '...',
+        link: '/AI_Intrusion_Detection_Report.pdf', //[cite: 2]
+      },
+      // ... add the others similarly
+    ],
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+  seo: { 
+    title: 'Portfolio of Liran Napadenski', 
+    description: 'M.Sc. Computer Science Student at Tel Aviv University specializing in Machine Learning and Systems.', 
+    imageURL: '' 
+  },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    researchGate: '',
-    facebook: '',
-    instagram: '',
-    reddit: '',
-    threads: '',
-    youtube: '', // example: 'pewdiepie'
-    udemy: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    discord: '',
-    telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: '',
+    linkedin: 'liran-napadenski',
+    phone: '+972-52-2979723',
+    email: 'liran.napadenski@gmail.com',
   },
   resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '', 
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'Python',
+    'PyTorch',
+    'C++',
+    'AVX2/SIMD',
+    'Java',
+    'Spring Boot',
+    'C#',
+    'ASP.NET',
+    'SQL',
+    'React',
+    'TypeScript',
+    'Graph Neural Networks (GNN)',
+    'Transformers/NLP',
+    'Systems Programming',
+    'Parallel Computing',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Self-Employed',
+      position: 'Private Tutor (CS, Math, Physics)',
+      from: 'Ongoing',
       to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
-  ],
-  certifications: [
-    {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      companyLink: '',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Tel Aviv University',
+      degree: 'M.Sc. in Computer Science (Focus: Machine Learning)',
+      from: '2025',
+      to: 'Expected 2027',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Tel Aviv University',
+      degree: 'B.Sc. in Computer Science and Chemistry',
+      from: '2022',
+      to: '2025',
+    },
+    {
+      institution: 'Odyssey – Academic Studies Program in the Sciences',
+      degree: 'Advanced University Coursework',
+      from: '2020',
+      to: '2022',
     },
   ],
-  publications: [
-    {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
-      journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-  ],
-  // Display articles from your medium or dev account. (Optional)
-  blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
-  },
-  googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-  },
-  // Track visitor interaction and behavior. https://www.hotjar.com
-  hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
     defaultTheme: 'lofi',
-
-    // Hides the switch in the navbar
-    // Useful if you want to support a single color mode
     disableSwitch: false,
-
-    // Should use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: false,
-
-    // Display the ring in Profile picture
+    respectPrefersColorScheme: true,
     displayAvatarRing: true,
-
-    // Available themes. To remove any theme, exclude from here.
-    themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'dim',
-      'nord',
-      'sunset',
-      'caramellatte',
-      'abyss',
-      'silk',
-      'procyon',
-    ],
+    themes: ['light', 'dark', 'corporate', 'lofi', 'business', 'nord'],
   },
-
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
-
   enablePWA: true,
 };
 
