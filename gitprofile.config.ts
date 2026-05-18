@@ -11,7 +11,7 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'manual',
       manual: {
-        projects: ['LiranNapadenski/NLP_final_project', 'LiranNapadenski/Deep_learning_final', 'LiranNapadenski/web-application-AIDS', 'LiranNapadenski/software-final' ],
+        projects: ['LiranNapadenski/NLP_final_project', 'LiranNapadenski/Deep_learning_final', 'LiranNapadenski/web-application-AIDS', 'LiranNapadenski/software-final', 'LiranNapadenski/stock-api' ],
       },
     },
     external: {
