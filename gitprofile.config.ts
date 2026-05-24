@@ -68,7 +68,7 @@ const CONFIG = {
     discord: '',
     telegram: '',
     website: '',
-    phone: '+972-52-2979723',
+    phone: '',
     email: 'liran.napadenski@gmail.com',
   },
   resume: {
