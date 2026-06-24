@@ -46,10 +46,10 @@ const CONFIG = {
           link: '/portfolio/NLP_Math_Inference.pdf',
         },
         {
-          title: 'Full-Stack Web Application',
+          title: 'SNMF Clustering Library (Python & C)',
           description:
-            'Developed a full-stack application with a secure REST API backend and a responsive React/TypeScript frontend. \n\n**What I Learned:** Strengthened my ability to orchestrate end-to-end data flows, implement robust real-time input validation, and manage complex application states.',
-          imageUrl: 'https://img.freepik.com/free-vector/web-development-programmer-engineering-and-coding-websites_107791-3863.jpg',
+            'Developed a Python library powered by a custom-built C backend to perform highly efficient Semi-Nonnegative Matrix Factorization (SNMF) clustering on large datasets.\n\n**What I Learned:** Mastered cross-language integration using the Python C-API, optimized algorithmic execution speed through low-level C programming, and managed manual memory allocation to ensure stability during intensive matrix computations.',
+          imageUrl: 'https://img.freepik.com/free-vector/programmer-working-web-development-code-engineer-programming-python-php-java-script-computer_90220-249.jpg',
           link: 'https://github.com/LiranNapadenski/software-final',
         },
         {
